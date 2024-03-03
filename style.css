@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --color-dark: rgb(45, 44, 44);
+  --color-blue: blue;
+
+  /* FOR NORMAL MODE */
+
+  --body-bg: pink;
+  --text-color: black;
+  --shadow: 4px -2px 40px 9px rgb(123, 121, 121);
+
+  /* FOR DARK MODE */
+  --dark-text-color: white;
+  --dark-body-color: var(--color-dark);
+}
+.wrapper {
+  background: var(--body-bg);
+  color: var(--text-color);
+}
+/* DARK MODE TOGGLER  */
+.dark-mode-toggler {
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
+}
+.dark-mode-toggler:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+/* MAKING DARK MODE WORK */
+#darkmode:checked + .wrapper {
+  background: var(--dark-body-color);
+  color: var(--dark-text-color);
+  box-shadow: var(--shadow);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.para1 {
+  border: 2px solid rgb(1, 1, 1);
+  box-shadow: var(--shadow);
+  margin-bottom: 5rem;
+  padding: 1em;
+  background: var(--body-bg);
+}
